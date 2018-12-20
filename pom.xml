@@ -25,7 +25,6 @@
         <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
     </properties>
     <dependencies>
-
     </dependencies>
 
     <build>
