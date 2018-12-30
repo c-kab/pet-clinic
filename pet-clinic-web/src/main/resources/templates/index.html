@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'home')}">
 <head>
     <meta charset="UTF-8">
     <title>Pet Clinic Index </title>
 </head>
 <body>
     <h1>THIS IS THE INDEX PAGE OF MY WEB SITE Y'ALL </h1>
-    <p th:text="'Hello thymeleaf'">Thymeleaf should appear here</p>
+    <p th:text="#{welcome}">Thymeleaf should appear here</p>
+    <div class="row">
+        <div class="col-md-12">
+            <img class="img-responsive" src="../static/resources/images/pets.png" th:src="@{/resources/images/pets.png}"/>
+        </div>
+    </div>
 </body>
 </html>
