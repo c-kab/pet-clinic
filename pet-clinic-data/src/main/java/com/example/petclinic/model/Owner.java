@@ -1,11 +1,24 @@
 package com.example.petclinic.model;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+
+@Entity
+@Table(name = "owners")
 public class Owner extends  Person  {
 
+    @Column(name ="city")
+    private String city ;
+
+    @Column(name = "telephone")
+    private String telephone ;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets  = new HashSet<>();
+
+    @Column(name = "address")
     private String address ;
 
     public Set<Pet> getPets() {
@@ -40,8 +53,7 @@ public class Owner extends  Person  {
         this.telephone = telephone;
     }
 
-    private String city ;
-    private String telephone ;
+
 
 
 }
